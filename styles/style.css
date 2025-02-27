@@ -1,0 +1,275 @@
+/* Chargement de la police DM Sans - Regular */
+@font-face {
+  font-family: 'DM Sans';
+  src: url('../fonts/woff2/DMSans-Regular.woff2') format('woff2'),
+    url('../fonts/woff/DMSans-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Chargement de la police DM Sans - Medium */
+@font-face {
+  font-family: 'DM Sans';
+  src: url('../fonts/woff2/DMSans-Medium.woff2') format('woff2'),
+    url('../fonts/woff/DMSans-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Chargement de la police DM Sans - Italic */
+@font-face {
+  font-family: 'DM Sans';
+  src: url('../fonts/woff2/DMSans-MediumItalic.woff2') format('woff2'),
+    url('../fonts/woff/DMSans-MediumItalic.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Chargement de la police DM Sans - Regular Italic */
+@font-face {
+  font-family: 'DM Sans';
+  src: url('../fonts/woff2/DMSans-RegularItalic.woff2') format('woff2'),
+    url('../fonts/woff/DMSans-RegularItalic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* variables */
+:root {
+  /* couleurs */
+  --ClrPurple100: hsl(254, 88%, 90%);
+  --ClrPurple500: hsl(256, 67%, 59%);
+  --ClrYellow100: hsl(31, 66%, 93%);
+  --ClrYellow500: hsl(39, 100%, 71%);
+  --ClrWhite: hsl(0, 0%, 100%);
+  --ClrBlack: hsl(0, 0%, 7%);
+  --ClrBg: hsl(0, 0%, 96%);
+
+  /* font */
+  --font-family-primary: 'DM Sans', sans-serif;
+
+  /* Poids */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+
+  /* Tailles */
+  --font-size-small: 16px;
+  --font-size-midle: 22px;
+  --font-size-big: 46px;
+
+  /* border cards */
+  --border-cards: 15px;
+}
+
+/* ----------------------------------------------------------------------- */
+
+body {
+  background-color: var(--ClrBg);
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  object-fit: cover;
+}
+
+h2 {
+  line-height: 20px;
+}
+
+/* conteneur de l'ensemble des cartes */
+.card-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-container h1 {
+  display: none;
+}
+
+/* carte individuelle */
+.card-container section {
+  border-radius: var(--border-cards);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 375px;
+  margin: 20px;
+  padding: 20px;
+}
+
+/* -------------------- 1ere card -------------------- */
+.card-container .card-item:nth-child(2) {
+  background-color: var(--ClrPurple500);
+}
+
+.card-container .card-item:nth-child(2) h2 {
+  color: var(--ClrWhite);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-big);
+  font-weight: var(--font-weight-medium);
+  text-align: center;
+  padding: 20px 0px;
+  line-height: 50px;
+}
+
+.card-container .card-item:nth-child(2) em {
+  color: var(--ClrYellow500);
+}
+
+.card-container .card-item:nth-child(2) i {
+  font-style: italic;
+}
+
+.card-container .card-item:nth-child(2) figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.card-container .card-item:nth-child(2) figcaption {
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-normal);
+  font-size: 17px;
+  color: var(--ClrPurple100);
+  text-align: center;
+}
+
+.card-container .card-item:nth-child(2) img {
+  width: 180px;
+  height: auto;
+}
+
+/*-------------------- 2eme card--------------------  */
+.card-container .card-item:nth-child(3) {
+  background-color: var(--ClrWhite);
+}
+
+.card-container .card-item:nth-child(3) img {
+  width: 340px;
+  height: auto;
+  border-radius: 70px;
+}
+
+.card-container .card-item:nth-child(3) h2 {
+  background-color: var(--ClrWhite);
+  color: var(--ClrBlack);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-midle);
+  font-weight: var(--font-weight-medium);
+}
+
+/*-------------------- 3eme card--------------------  */
+
+.card-container .card-item:nth-child(4) {
+  background-color: var(--ClrYellow500);
+  height: 230px;
+  position: relative;
+  overflow: hidden;
+  justify-content: flex-start;
+}
+
+.card-container .card-item:nth-child(4) h2 {
+  color: var(--ClrBlack);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-midle);
+  font-weight: var(--font-weight-medium);
+  align-self: self-start;
+}
+
+.card-container .card-item:nth-child(4) img {
+  width: 230px;
+  height: auto;
+  position: absolute;
+  transform: translate(0, 32.5%);
+}
+
+/*-------------------- 4eme card--------------------  */
+.card-container .card-item:nth-child(5) {
+  background-color: var(--ClrPurple100);
+}
+
+.card-container .card-item:nth-child(5) h2 {
+  color: var(--ClrBlack);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-midle);
+  font-weight: var(--font-weight-medium);
+}
+
+.card-container .card-item:nth-child(5) figcaption {
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-normal);
+  font-size: var(--font-size-small);
+  color: var(--ClrBlack);
+  text-align: center;
+}
+
+/*-------------------- 5eme card--------------------  */
+.card-container .card-item:nth-child(6) {
+  background-color: var(--ClrPurple500);
+}
+
+.card-container .card-item:nth-child(6) h2 {
+  color: var(--ClrWhite);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-midle);
+  font-weight: var(--font-weight-medium);
+  text-align: center;
+}
+
+/*-------------------- 6eme card--------------------  */
+
+.card-container .card-item:nth-child(7) {
+  background-color: var(--ClrWhite);
+}
+
+.card-container .card-item:nth-child(7) h2 {
+  color: var(--ClrBlack);
+}
+
+.card-container .card-item:nth-child(7) strong {
+  display: block;
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-big);
+  font-weight: var(--font-weight-medium);
+}
+
+.card-container .card-item:nth-child(7) em {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-normal);
+}
+
+/*-------------------- 7eme card--------------------  */
+
+.card-container .card-item:nth-child(8) {
+  background-color: var(--ClrYellow100);
+}
+
+.card-container .card-item:nth-child(8) h2 {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-midle);
+  font-weight: var(--font-weight-medium);
+}
+
+.card-container .card-item:nth-child(8) i {
+  color: var(--ClrPurple500);
+  font-style: italic;
+}
+
+/*-------------------- 8eme card--------------------  */
+
+.card-container .card-item:nth-child(9) {
+  background-color: var(--ClrYellow500);
+}
+
+.card-container .card-item:nth-child(9) h2 {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-midle);
+  font-weight: var(--font-weight-medium);
+}
